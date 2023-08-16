@@ -3029,7 +3029,7 @@ input, select, textarea {
 
 				.wrapper.style3 select option {
 					color: #ffffff;
-					background: #712af3;
+					background: #000000;
 				}
 
 			.wrapper.style3 input[type="checkbox"] + label,
