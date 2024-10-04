@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JustAiden's Portfolio</title>
+    
+    <!-- Enable iOS web app mode -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="apple-touch-icon" href="PFP.png">
+
     <style>
         body {
             margin: 0;
@@ -57,14 +63,15 @@
             border-bottom: 2px solid #606060;
             padding-bottom: 0.5rem;
         }
-        a {
-    color: white;
-    text-decoration: none;
-}
 
-a:hover {
-    text-decoration: underline;
-}
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
@@ -94,12 +101,23 @@ a:hover {
             </div>
             
             <div class="section">
-    <h2>Contact</h2>
-    <p>Discord: justaiden9</p>
-    <p>YouTube: <a href="https://youtube.com/@justaiden." target="_blank">youtube.com/@justaiden.</a></p>
-    <p>GitHub: <a href="https://github.com/justaiden9" target="_blank">github.com/justaiden9</a></p>
-</div>
+                <h2>Contact</h2>
+                <p>Discord: justaiden9</p>
+                <p>YouTube: <a href="https://youtube.com/@justaiden." target="_blank">youtube.com/@justaiden.</a></p>
+                <p>GitHub: <a href="https://github.com/justaiden9" target="_blank">github.com/justaiden9</a></p>
+            </div>
         </div>
     </div>
+
+    <script>
+        // Show a prompt to iOS users encouraging them to add the app to the home screen
+        if (navigator.userAgent.includes('iPhone') || navigator.userAgent.includes('iPad')) {
+            setTimeout(function() {
+                if (!window.matchMedia('(display-mode: standalone)').matches) {
+                    alert("Add this app to your home screen for the best experience. Tap the share icon and then 'Add to Home Screen'.");
+                }
+            }, 2000);  // Wait 2 seconds before showing the prompt
+        }
+    </script>
 </body>
 </html>
