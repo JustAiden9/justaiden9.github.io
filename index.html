@@ -80,7 +80,6 @@
             text-decoration: underline;
         }
 
-        /* New Styles for Projects */
         .projects {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -115,6 +114,46 @@
             font-size: 0.9rem;
             color: #d0d0d0;
         }
+
+        /* Discord status styles */
+        .discord-status {
+            background-color: #505050;
+            border-radius: 10px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .discord-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            margin-right: 1rem;
+        }
+        
+        .discord-info {
+            flex-grow: 1;
+        }
+        
+        .discord-name {
+            font-weight: bold;
+            margin-bottom: 0.25rem;
+        }
+        
+        .discord-activity {
+            font-size: 0.9rem;
+            color: #a0a0a0;
+        }
+        
+        .online-indicator {
+            width: 10px;
+            height: 10px;
+            background-color: #43b581;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 0.5rem;
+        }
         
         @media (max-width: 600px) {
             .container {
@@ -145,6 +184,20 @@
             
             <div class="section">
                 <h2>Currently Working On</h2>
+                <div class="discord-status">
+                    <img src="PFP.png" alt="Discord avatar" class="discord-avatar">
+                    <div class="discord-info">
+                        <div class="discord-name">
+                            <span class="online-indicator"></span>
+                            Skull Emoji
+                        </div>
+                        <div class="discord-activity">
+                            Playing Local Server<br>
+                            On Minecraft 1.8.9<br>
+                            05:39 elapsed
+                        </div>
+                    </div>
+                </div>
                 <p>Xcode projects for Mobile App Development</p>
             </div>
             
@@ -172,7 +225,6 @@
                         </a>
                         <div class="description">A brief description of what Project 3 is about.</div>
                     </div>
-                    <!-- Add more projects as needed -->
                 </div>
             </div>
             
